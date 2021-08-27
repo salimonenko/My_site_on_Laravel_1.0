@@ -21,7 +21,8 @@
 			<div class="message">Имя: {{ $element->name }}</div>
 			<div class="message">Дата, время: {{ $element->created_at }}</div>
 			<div class="message">Сообщение: {{ $element->message }}</div>
-			<button>Детальнее...</button>
+			<a href="{{ route('contact-dataOne', $element->id) }}"><button>Редактировать</button></a>
+			<a href="{{ route('contact-delete', $element->id) }}"><button>Удалить</button></a>
 		</div>
 	@endforeach
 	

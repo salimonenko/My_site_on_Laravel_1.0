@@ -40,15 +40,12 @@ Route::post('/contact/submit', 'App\Http\Controllers\ContactController@submit')-
 
 //Route::get('/', [App\Http\Controllers\Cover::class, 'index'])->name('cover');
 
+Route::get('/contact/all', 'App\Http\Controllers\ContactController@allData')->name('contact-data');
+
+Route::get('/contact/all/{id}', 'App\Http\Controllers\ContactController@showOneMessage')->name('contact-dataOne'); // {id} - это ЛЮБОЕ динамическое значение, передающееся из get-запроса
 
 Route::get('/contact/all/{id}/update', 'App\Http\Controllers\ContactController@updateMessage')->name('contact-update'); // {id} - это ЛЮБОЕ динамическое значение, передающееся из get-запроса
 
 Route::post('/contact/all/{id}/update', 'App\Http\Controllers\ContactController@updateMessageSubmit')->name('contact-updateSubmit'); // {id} - это ЛЮБОЕ динамическое значение, передающееся из get-запроса
 
 Route::get('/contact/all/{id}/delete', 'App\Http\Controllers\ContactController@deleteMessage')->name('contact-delete'); // {id} - это ЛЮБОЕ динамическое значение, передающееся из get-запроса
-
-
-
-Route::get('/contact/all/{id}', 'App\Http\Controllers\ContactController@showOneMessage')->name('contact-dataOne'); // {id} - это ЛЮБОЕ динамическое значение, передающееся из get-запроса
-
-Route::get('/contact/all', 'App\Http\Controllers\ContactController@allData')->name('contact-data');
