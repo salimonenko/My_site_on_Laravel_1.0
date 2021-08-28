@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ 
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,7 +27,7 @@ Route::get('/contact', function () {
 
 
 /* Route::post('/contact/submit', function () {
-    return "OK";
+    return "OK"; // Выведет надпись ОК
 });
 */
 
