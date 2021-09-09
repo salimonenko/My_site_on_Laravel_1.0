@@ -37,12 +37,12 @@ class ContactController extends Controller{
 		$contact = Contact::all(); // Если так - в одну строчку, сразу обращаемся к классу - когда к УЖЕ ИМЕЮЩЕЙСЯ базе данных
 		return view('messages', ['data' => $contact]);
 	}
-
-	public function showOneMessage($id){ // только 1 динамический параметр
+/*
+	public function showOneMessage($id){ // только 1 динамический параметр  // Функция перенесена в \app\Http\Controllers\HomeController.php
 		$contact = Contact::all();
 		return view('one-message', ['data' => $contact->find($id)]);
 	}
-	
+*/	
 public function updateMessage($id){ 
 		$contact = new Contact(); 
 
@@ -62,12 +62,12 @@ public function updateMessageSubmit($id, ContactRequest $req){
 		return redirect()->route('contact-dataOne', $id)->with('success', 'Ваше сообщение было обновлено');
 	}
 	
-	
-public function deleteMessage($id){
+/*	
+public function deleteMessage($id){    // Функция перенесена в \app\Http\Controllers\HomeController.php
 	Contact::find($id)->delete();
 	return redirect()->route('contact-data')->with('success', 'Ваше сообщение было удалено');
 	}
-
+*/
 
 	
 }

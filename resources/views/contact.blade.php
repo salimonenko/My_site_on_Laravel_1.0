@@ -43,17 +43,17 @@
 			<p>Или Вы можете отправить мне сообщение:</p>
 			<div class="form-contacts" >
 				<label for="name">Ваше имя: </label>
-				<input type="text" name="name" placeholder="Введите Ваше имя..." id="name" />
+				<input type="text" name="name" value="{{ old('name') }}" placeholder="Введите Ваше имя..." id="name" />
 			</div>
 			
 			<div class="form-contacts" >
 				<label for="email">Ваш e-mail: </label>
-				<input type="text" name="email" placeholder="Введите Ваш e-mail..." id="email" />
+				<input type="text" name="email" value="{{ old('email') }}" placeholder="Введите Ваш e-mail..." id="email" />
 			</div>
 			
 			<div class="form-contacts" >
 				<label for="message">Текст сообщения:</label>
-				<textarea type="text" name="message" placeholder="О чем Вы хотите написать мне?..." id="message" ></textarea>
+				<textarea type="text" name="message" placeholder="О чем Вы хотите написать мне?..." id="message" >{{ old('message') }}</textarea>
 			</div>		
 			
 			<button type="submit" class="btn-success">Отправить сообщение</button>
